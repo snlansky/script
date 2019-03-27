@@ -17,7 +17,10 @@ apt-get install -y build-essential git make curl unzip g++ libtool tar ack tmux
 apt install docker.io
 ./init-docker-group.sh snlan
 docker run --rm busybox echo All good
-
+# install docker-compose
+curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+docker-compose --version
 # ----------------------------------------------------------------
 # Install Golang
 # ----------------------------------------------------------------
