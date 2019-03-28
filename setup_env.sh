@@ -23,11 +23,11 @@ done
 
 
 # Install some basic utilities
-apt install -y build-essential git make curl unzip gcc g++ libtool tar unzip rar unrar ack-grep tmux zsh \
+apt install -y build-essential git make curl unzip gcc g++ libtool telnet wget tar unzip rar unrar ack-grep tmux zsh \
                 binutils build-essential bison apt-transport-https ca-certificates software-properties-common gdebi \
                 sysstat nmon htop atop iotop iftop nethogs ethtool nicstat dstat vnstat pstack strace colordiff \
                 tmux zsh autojump ack-grep vim vim-gtk exuberant-ctags i3 suckless-tools flameshot ansible fcitx \
-                mycli mongodb-clients mongo-tools redis-tools python-software-properties
+                mycli mongodb-clients mongo-tools redis-tools python-software-properties virtualbox
 
 
 # ----------------------------------------------------------------
