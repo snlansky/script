@@ -30,7 +30,7 @@ apt install -y build-essential libncurses-dev git make curl unzip gcc g++ libtoo
                 binutils bison apt-transport-https ca-certificates software-properties-common gdebi \
                 sysstat nmon htop atop iotop iftop nethogs ethtool nicstat dstat vnstat pstack strace colordiff \
                 tmux zsh autojump ack-grep vim vim-gtk exuberant-ctags tree i3 suckless-tools flameshot ansible fcitx \
-                mycli mongodb-clients mongo-tools redis-tools python-software-properties virtualbox emacs26
+                mycli mongodb-clients mongo-tools redis-tools python-software-properties virtualbox emacs26 vlc
 
 
 # ----------------------------------------------------------------
