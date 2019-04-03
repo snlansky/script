@@ -7,3 +7,5 @@ go get -u github.com/dougm/goflymake
 go get -u github.com/rogpeppe/godef
 # old name oracle
 go get -u golang.org/x/tools/cmd/guru
+go get -u github.com/kisielk/errcheck
+gocode set propose-builtins true
