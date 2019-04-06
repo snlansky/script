@@ -1,8 +1,5 @@
 #!/bin/bash
 
-set -e
-set -x
-
 echo -e "Backuping existing apt configuration"
 timestr=$(date +%Y%m%d%H%M)
 tar -zcPf /etc/apt.$timestr.tar.gz /etc/apt
