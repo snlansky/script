@@ -128,6 +128,7 @@ sudo rm -rf $GOROOT
 sudo mkdir -p $GOROOT
 sudo mkdir -p $GOPATH
 sudo curl -sL $GO_URL | (cd $GOROOT && tar --strip-components 1 -xz)
+source /etc/profile.d/goroot.sh
 
 
 # ----------------------------------------------------------------
