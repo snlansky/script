@@ -13,7 +13,7 @@ aptRepositories=(
   ppa:jonathonf/vim # vim
   ppa:git-core/ppa # git
   ppa:ansible/ansible # ansible
-  ppa:webupd8team/java # javaF
+  ppa:webupd8team/java # java
   ppa:kelleyk/emacs # emacs
   "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" # docker-ce
 )
