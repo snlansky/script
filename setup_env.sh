@@ -35,7 +35,6 @@ apt install -y build-essential libncurses-dev git make curl unzip gcc g++ libtoo
 
 # ----------------------------------------------------------------
 # install debian packages
-# ----------------------------------------------------------------
 aptCache=/var/cache/apt/archives
 debPackages=(
   http://cdn2.ime.sogou.com/dl/index/1524572264/sogoupinyin_2.2.0.0108_amd64.deb
@@ -51,8 +50,8 @@ do
   fi
 done
 
-# Install docker
 # ----------------------------------------------------------------
+# Install docker
 usermod -aG docker $(whoami)
 # install docker-compose
 curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -60,8 +59,8 @@ chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
 
-# Install Golang
 # ----------------------------------------------------------------
+# Install Golang
 GO_VER=1.12.1
 GO_URL=https://storage.googleapis.com/golang/go${GO_VER}.linux-amd64.tar.gz
 
@@ -76,27 +75,28 @@ export GOPATH=$GOPATH
 export PATH=\$PATH:$GOROOT/bin:$GOPATH/bin
 EOF
 
+
 rm -rf $GOROOT
 mkdir -p $GOROOT
 curl -sL $GO_URL | (cd $GOROOT && tar --strip-components 1 -xz)
 
 
-# Install npm
 # ----------------------------------------------------------------
+# Install npm
 apt install npm
 npm install -g http-server cleaver
 
 
-# Install java
 # ----------------------------------------------------------------
+# Install java
 # must init ppa:webupd8team/java repositore
 apt install oracle-java8-installer
 java -version
 apt install maven
 
 
-# Install rust
 # ----------------------------------------------------------------
+# Install rust
 curl https://sh.rustup.rs -sSf | bash
 
 
@@ -109,8 +109,8 @@ if [[ ! -d $HOME/.oh-my-zsh ]]; then
 fi
 
 
-# https://github.com/junegunn/fzf
 # ----------------------------------------------------------------
+# https://github.com/junegunn/fzf
 if [[ ! -d $HOME/.fzf ]]; then
   echo -e "\nInstalling fzf..."
   git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf && $HOME/.fzf/install
