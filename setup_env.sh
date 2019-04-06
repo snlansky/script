@@ -133,14 +133,14 @@ sudo curl -sL $GO_URL | (cd $GOROOT && tar --strip-components 1 -xz)
 # ----------------------------------------------------------------
 echo "Install java"
 # must init ppa:webupd8team/java repositore
-apt install oracle-java8-installer
+sudo apt install oracle-java8-installer
 java -version
-apt install maven
+sudo apt install maven
 
 
 # ----------------------------------------------------------------
 # Install rust
-curl https://sh.rustup.rs -sSf | bash
+sudo curl https://sh.rustup.rs -sSf | bash
 
 # ----------------------------------------------------------------
 # Remove automatically all unused packages
