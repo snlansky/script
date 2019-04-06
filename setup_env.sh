@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 set -x
@@ -100,7 +100,7 @@ apt install maven
 
 # Install rust
 # ----------------------------------------------------------------
-curl https://sh.rustup.rs -sSf | sh
+curl https://sh.rustup.rs -sSf | bash
 
 
 # https://github.com/robbyrussell/oh-my-zsh
