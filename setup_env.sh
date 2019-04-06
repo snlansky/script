@@ -25,12 +25,12 @@ done
 
 
 sudo apt update
-sudo apt install -y build-essential libncurses-dev git make curl unzip gcc g++ libtool telnet wget tar unzip rar unrar ack-grep tmux zsh \
-                    binutils bison apt-transport-https ca-certificates software-properties-common gdebi net-tools \
+sudo apt install -y sudo lsb-release lsb-core net-tools telnet wget curl git git-extras make gcc g++ libtool pkg-config unzip rar unrar \
+                    mercurial binutils build-essential bison apt-transport-https ca-certificates software-properties-common gdebi \
                     sysstat nmon htop atop iotop iftop nethogs ethtool nicstat dstat vnstat pstack strace colordiff \
-                    tmux zsh autojump ack-grep vim vim-gtk exuberant-ctags tree i3 suckless-tools flameshot ansible fcitx \
-                    mycli mongodb-clients mongo-tools redis-tools python-software-properties virtualbox emacs26 vlc \
-                    docker-ce
+                    python-pip python3-pip tmux zsh autojump ack-grep vim vim-gtk exuberant-ctags suckless-tools flameshot \
+                    mycli mongodb-clients mongo-tools redis-tools usb-creator-gtk telegram-desktop transmission  \
+                    docker-ce vlc virtualbox emacs26 i3 ansible fcitx
 
 
 # ----------------------------------------------------------------
