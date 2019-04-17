@@ -30,7 +30,7 @@ sudo apt install -y sudo lsb-release lsb-core net-tools telnet wget curl git git
                     sysstat nmon htop atop iotop iftop nethogs ethtool nicstat dstat vnstat pstack strace colordiff \
                     python-pip python3-pip tmux zsh autojump ack-grep silversearcher-ag vim vim-gtk exuberant-ctags suckless-tools flameshot \
                     mycli mongodb-clients mongo-tools redis-tools usb-creator-gtk telegram-desktop transmission  \
-                    docker-ce vlc virtualbox emacs26 i3 ansible fcitx
+                    docker-ce vlc virtualbox emacs26 i3 ansible fcitx jq
 
 
 # ----------------------------------------------------------------
