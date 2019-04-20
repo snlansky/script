@@ -16,5 +16,7 @@ go get -u github.com/josharian/impl
 go get -u github.com/cweill/gotests/...
 go get -u github.com/fatih/gomodifytags
 go get -u github.com/davidrjenni/reftools/cmd/fillstruct
+go get -u github.com/alecthomas/gometalinter
 
 gocode set propose-builtins true
+gometalinter --install --update
