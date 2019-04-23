@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt install curl
+
 echo -e "Backuping existing apt configuration"
 timestr=$(date +%Y%m%d%H%M)
 sudo tar -zcPf /etc/apt.$timestr.tar.gz /etc/apt
@@ -12,9 +14,8 @@ for k in ${aptKeys[@]}; do echo "Adding apt key: ${k}"; curl -fsSL $k | sudo apt
 aptRepositories=(
   ppa:jonathonf/vim # vim
   ppa:git-core/ppa # git
-  ppa:ansible/ansible # ansible
-  ppa:webupd8team/java # java
   ppa:kelleyk/emacs # emacs
+  # ppa:ansible/ansible # ansible
   "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" # docker-ce
 )
 for ((i = 0; i < ${#aptRepositories[@]}; i++));
@@ -23,14 +24,13 @@ do
   sudo add-apt-repository -y -n "${aptRepositories[$i]}"
 done
 
-
 sudo apt update
-sudo apt install -y sudo lsb-release lsb-core net-tools telnet wget curl git git-extras make gcc g++ libtool pkg-config unzip rar unrar \
+sudo apt install -y lsb-release lsb-core net-tools telnet wget curl git git-extras make gcc g++ libtool pkg-config unzip rar unrar \
                     mercurial binutils build-essential bison apt-transport-https ca-certificates software-properties-common gdebi \
                     sysstat nmon htop atop iotop iftop nethogs ethtool nicstat dstat vnstat pstack strace colordiff \
                     python-pip python3-pip tmux zsh autojump ack-grep silversearcher-ag vim vim-gtk exuberant-ctags suckless-tools flameshot \
-                    mycli mongodb-clients mongo-tools redis-tools usb-creator-gtk telegram-desktop transmission  \
-                    docker-ce vlc virtualbox emacs26 i3 ansible fcitx jq
+                    mycli mongodb-clients mongo-tools redis-tools usb-creator-gtk telegram-desktop transmission \
+                    docker-ce vlc virtualbox i3 ansible fcitx jq emacs26
 
 
 # ----------------------------------------------------------------
@@ -106,42 +106,6 @@ sudo usermod -aG docker $(whoami)
   sudo curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
   sudo chmod +x /usr/local/bin/docker-compose
 }
-
-
-# ----------------------------------------------------------------
-# Install Golang
-GO_VER=1.12.1
-GO_URL=https://storage.googleapis.com/golang/go${GO_VER}.linux-amd64.tar.gz
-
-# Set Go environment variables needed by other scripts
-export GOPATH="/opt/gopath"
-export GOROOT="/opt/go"
-PATH=$GOROOT/bin:$GOPATH/bin:$PATH
-
-sudo cat <<EOF >/etc/profile.d/goroot.sh
-export GOROOT=$GOROOT
-export GOPATH=$GOPATH
-export PATH=\$PATH:$GOROOT/bin:$GOPATH/bin
-EOF
-
-sudo rm -rf $GOROOT
-sudo mkdir -p $GOROOT
-sudo mkdir -p $GOPATH
-sudo curl -sL $GO_URL | (cd $GOROOT && tar --strip-components 1 -xz)
-source /etc/profile.d/goroot.sh
-
-
-# ----------------------------------------------------------------
-echo "Install java"
-# must init ppa:webupd8team/java repositore
-sudo apt install oracle-java8-installer
-java -version
-sudo apt install maven
-
-
-# ----------------------------------------------------------------
-# Install rust
-sudo curl https://sh.rustup.rs -sSf | bash
 
 # ----------------------------------------------------------------
 # Remove automatically all unused packages
