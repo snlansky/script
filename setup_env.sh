@@ -25,7 +25,7 @@ do
 done
 
 sudo apt update
-sudo apt install -y lsb-release lsb-core net-tools telnet wget curl git git-extras make gcc g++ cmake libtool pkg-config unzip rar unrar \
+sudo apt install -y lsb-release lsb-core net-tools telnet wget curl git git-extras make gcc g++ cmake clang libtool pkg-config unzip rar unrar \
                     mercurial binutils build-essential bison apt-transport-https ca-certificates software-properties-common gdebi \
                     sysstat nmon htop atop iotop iftop nethogs ethtool nicstat dstat vnstat pstack strace colordiff \
                     python-pip python3-pip tmux zsh autojump ack-grep silversearcher-ag vim vim-gtk exuberant-ctags suckless-tools flameshot \
