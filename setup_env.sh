@@ -110,3 +110,5 @@ sudo usermod -aG docker $(whoami)
 # ----------------------------------------------------------------
 # Remove automatically all unused packages
 sudo apt autoremove -y
+
+echo "place reboot computer"
