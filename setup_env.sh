@@ -15,6 +15,7 @@ aptRepositories=(
   ppa:jonathonf/vim # vim
   ppa:git-core/ppa # git
   ppa:kelleyk/emacs # emacs
+  ppa:mmstick76/alacritty # alacritty GPU Terminal
   # ppa:ansible/ansible # ansible
   "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" # docker-ce
 )
@@ -30,7 +31,7 @@ sudo apt install -y lsb-release lsb-core net-tools telnet wget curl git git-extr
                     sysstat nmon htop atop iotop iftop nethogs ethtool nicstat dstat vnstat pstack strace colordiff \
                     python-pip python3-pip tmux zsh autojump ack-grep silversearcher-ag vim vim-gtk exuberant-ctags suckless-tools flameshot \
                     mycli mongodb-clients mongo-tools redis-tools usb-creator-gtk telegram-desktop transmission \
-                    docker-ce vlc virtualbox i3 ansible fcitx jq emacs26 kazam
+                    docker-ce vlc virtualbox i3 ansible fcitx jq emacs26 kazam alacritty
 
 
 # ----------------------------------------------------------------
@@ -49,6 +50,7 @@ do
     sudo gdebi -n $filename
   fi
 done
+
 
 # ----------------------------------------------------------------
 # install tmux
@@ -72,12 +74,14 @@ if [ ! -d $HOME/.oh-my-zsh ]; then
   chsh -s /bin/zsh
 fi
 
+
 # ----------------------------------------------------------------
 # https://github.com/junegunn/fzf
 if [ ! -d $HOME/.fzf ]; then
   echo -e "\nInstalling fzf..."
   git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf && $HOME/.fzf/install
 fi
+
 
 # ----------------------------------------------------------------
 # https://github.com/creationix/nvm
@@ -107,8 +111,15 @@ sudo usermod -aG docker $(whoami)
   sudo chmod +x /usr/local/bin/docker-compose
 }
 
+
 # ----------------------------------------------------------------
 # Remove automatically all unused packages
 sudo apt autoremove -y
 
 echo "place reboot computer"
+
+
+# ----------------------------------------------------------------
+# install by pip
+# 
+pip install ranger-fm
