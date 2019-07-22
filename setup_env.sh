@@ -121,5 +121,5 @@ echo "place reboot computer"
 
 # ----------------------------------------------------------------
 # install by pip
-# 
+# console file manager with VI key bindings
 pip install ranger-fm
