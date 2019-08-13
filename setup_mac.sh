@@ -4,3 +4,4 @@
 
 sudo brew install git
 brew install tmux
+brew install zsh fzf 
