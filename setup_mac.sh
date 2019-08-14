@@ -4,7 +4,7 @@
 
 sudo brew install git
 brew install tmux
-brew install zsh fzf kubernetes-cli
+brew install zsh fzf kubernetes-cli autojump cmake
 
 # ----------------------------------------------------------------
 # https://github.com/robbyrussell/oh-my-zsh
