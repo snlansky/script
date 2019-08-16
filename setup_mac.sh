@@ -2,9 +2,10 @@
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-sudo brew install git
+brew install git
 brew install tmux
 brew install zsh fzf kubernetes-cli autojump cmake
+brew install automake pkg-config pcre xz
 
 # ----------------------------------------------------------------
 # https://github.com/robbyrussell/oh-my-zsh
