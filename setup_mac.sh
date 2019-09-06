@@ -6,6 +6,7 @@ brew install git
 brew install tmux
 brew install zsh fzf kubernetes-cli autojump cmake
 brew install automake pkg-config pcre xz
+brew install lrzsz
 
 # ----------------------------------------------------------------
 # https://github.com/robbyrussell/oh-my-zsh
