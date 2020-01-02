@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install curl
+sudo apt install curl git
 
 echo -e "Backuping existing apt configuration"
 timestr=$(date +%Y%m%d%H%M)
@@ -15,9 +15,6 @@ aptRepositories=(
   ppa:jonathonf/vim # vim
   ppa:git-core/ppa # git
   ppa:kelleyk/emacs # emacs
-  ppa:mmstick76/alacritty # alacritty GPU Terminal
-  # ppa:ansible/ansible # ansible
-  # "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" # docker-ce
 )
 for ((i = 0; i < ${#aptRepositories[@]}; i++));
 do
@@ -26,12 +23,12 @@ do
 done
 
 sudo apt update
-sudo apt install -y lsb-release lsb-core net-tools telnet wget curl git git-extras make gcc g++ cmake clang libtool pkg-config unzip rar unrar \
+sudo apt install -y lsb-release lsb-core net-tools telnet wget git-extras make gcc g++ cmake clang libtool pkg-config unzip rar unrar \
                     mercurial binutils build-essential bison apt-transport-https ca-certificates software-properties-common gdebi \
                     sysstat nmon htop atop iotop iftop nethogs ethtool nicstat dstat vnstat pstack strace colordiff \
                     python-pip python3-pip tmux zsh autojump ack-grep silversearcher-ag vim vim-gtk exuberant-ctags suckless-tools flameshot \
                     mycli mongodb-clients mongo-tools redis-tools usb-creator-gtk telegram-desktop transmission \
-                    docker-ce vlc virtualbox i3 ansible fcitx jq emacs26 kazam alacritty exfat-utils
+                    vlc virtualbox i3 fcitx jq emacs26 kazam exfat-utils
 
 
 # ----------------------------------------------------------------
@@ -82,7 +79,6 @@ if [ ! -d $HOME/.fzf ]; then
   git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf && $HOME/.fzf/install
 fi
 
-
 # ----------------------------------------------------------------
 # https://github.com/creationix/nvm
 if [ ! -d $HOME/.nvm ]; then
@@ -101,26 +97,13 @@ fi
 
 
 # ----------------------------------------------------------------
-# Add user account to the docker group
-sudo usermod -aG docker $(whoami)
-
-# https://github.com/docker/compose
-(command -v docker-compose >/dev/null 2>&1) || {
-  echo -e "\nInstalling docker-compose..."
-  sudo curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-  sudo chmod +x /usr/local/bin/docker-compose
-}
-
+# install by pip
+# console file manager with VI key bindings
+# https://github.com/ranger/ranger
+# pip install ranger-fm
 
 # ----------------------------------------------------------------
 # Remove automatically all unused packages
 sudo apt autoremove -y
 
 echo "place reboot computer"
-
-
-# ----------------------------------------------------------------
-# install by pip
-# console file manager with VI key bindings
-# https://github.com/ranger/ranger
-pip install ranger-fm
