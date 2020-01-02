@@ -6,7 +6,7 @@ sudo groupadd docker
 # Add user account to the docker group
 sudo gpasswd -a ${USER} docker
 
-service docker restart
+# service docker restart
 
 newgrp - docker
 
