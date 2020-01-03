@@ -12,7 +12,7 @@ sudo gpasswd -a snlan docker
 
 newgrp - docker
 
-usermod -a -G docker snlan
+sudo usermod -a -G docker snlan
 
 
 # https://github.com/docker/compose
