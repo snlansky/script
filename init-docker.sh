@@ -25,7 +25,6 @@ kubectl version
 # sudo groupadd docker
 # Add user account to the docker group
 sudo gpasswd -a snlan docker
+sudo usermod -a -G docker snlan
 sudo service docker restart
 newgrp - docker
-
-# sudo usermod -a -G docker snlan
