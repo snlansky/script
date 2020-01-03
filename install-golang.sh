@@ -9,6 +9,8 @@ export GOPATH="/opt/gopath"
 export GOROOT="/opt/go"
 
 cat <<EOF >/etc/profile.d/goroot.sh
+export GO111MODULE=on
+export GOPROXY=https://goproxy.io
 export GOROOT=$GOROOT
 export GOPATH=$GOPATH
 export PATH=\$PATH:$GOROOT/bin:$GOPATH/bin
@@ -20,6 +22,3 @@ rm -rf $GOROOT
 mkdir -p $GOROOT
 mkdir -p $GOPATH
 curl -sL $GO_URL | (cd $GOROOT && tar --strip-components 1 -xz)
-
-
-
