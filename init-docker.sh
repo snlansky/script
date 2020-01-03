@@ -4,7 +4,7 @@ sudo apt install curl git
 
 curl https://releases.rancher.com/install-docker/18.09.sh | sh
 
-sudo groupadd docker
+# sudo groupadd docker
 # Add user account to the docker group
 sudo gpasswd -a snlan docker
 
@@ -13,7 +13,6 @@ sudo gpasswd -a snlan docker
 newgrp - docker
 
 sudo usermod -a -G docker snlan
-
 
 # https://github.com/docker/compose
 (command -v docker-compose >/dev/null 2>&1) || {
