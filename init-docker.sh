@@ -8,15 +8,6 @@ curl https://releases.rancher.com/install-docker/18.09.sh | sh
 
 echo "install docker success!"
 
-# sudo groupadd docker
-# Add user account to the docker group
-sudo gpasswd -a snlan docker
-
-# service docker restart
-
-newgrp - docker
-
-sudo usermod -a -G docker snlan
 
 # https://github.com/docker/compose
 (command -v docker-compose >/dev/null 2>&1) || {
@@ -30,3 +21,11 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s http
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 kubectl version
+
+# sudo groupadd docker
+# Add user account to the docker group
+sudo gpasswd -a snlan docker
+sudo service docker restart
+newgrp - docker
+
+# sudo usermod -a -G docker snlan
