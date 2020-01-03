@@ -1,7 +1,8 @@
 #!/bin/bash
 
-GO_VER=1.12.1
-GO_URL=https://storage.googleapis.com/golang/go${GO_VER}.linux-amd64.tar.gz
+GO_VER=1.13.5
+# GO_URL=https://storage.googleapis.com/golang/go${GO_VER}.linux-amd64.tar.gz
+GO_URL=https://dl.google.com/go/go${GO_VER}.linux-amd64.tar.gz
 
 # Set Go environment variables needed by other scripts
 export GOPATH="/opt/gopath"
@@ -19,4 +20,6 @@ rm -rf $GOROOT
 mkdir -p $GOROOT
 mkdir -p $GOPATH
 curl -sL $GO_URL | (cd $GOROOT && tar --strip-components 1 -xz)
+
+
 
