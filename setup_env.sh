@@ -101,7 +101,11 @@ if [ ! -d $HOME/.nvm ]; then
   npm install -g http-server cleaver
 fi
 
-
+# ----------------------------------------------------------------
+# install fasd jump
+git clone https://github.com/clvv/fasd.git
+cd fasd
+sudo make install
 # ----------------------------------------------------------------
 # install by pip
 # console file manager with VI key bindings
