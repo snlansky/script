@@ -72,7 +72,8 @@ fi
 # https://github.com/robbyrussell/oh-my-zsh
 if [ ! -d $HOME/.oh-my-zsh ]; then
   echo -e "\nInstalling oh-my-zsh..."
-  curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+  curl -Lo install.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+  sh install.sh
   chsh -s /bin/zsh
 fi
 
