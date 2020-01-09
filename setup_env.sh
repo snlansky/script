@@ -111,8 +111,12 @@ sudo make install
 # ----------------------------------------------------------------
 # install by pip
 # console file manager with VI key bindings
-# https://github.com/ranger/ranger
+# https://github.com/ranger/range
 # pip install ranger-fm
+
+# https://github.com/starship/starship
+curl -fsSL https://starship.rs/install.sh | bash
+
 
 # ----------------------------------------------------------------
 # Remove automatically all unused packages
