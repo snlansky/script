@@ -115,7 +115,7 @@ sudo make install
 # pip install ranger-fm
 
 # https://github.com/starship/starship
-curl -fsSL https://starship.rs/install.sh | bash
+# curl -fsSL https://starship.rs/install.sh | bash
 
 
 # ----------------------------------------------------------------
