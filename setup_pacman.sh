@@ -4,9 +4,7 @@ sudo pacman-mirrors -c China
 # add archlinuxcn
 echo '
 
-[archlinuxcn]
-SigLevel = Optional TrustedOnly
-Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch' | sudo  tee -a  /etc/pacman.conf
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch' | sudo  tee -a  /etc/pacman.d/mirrorlist
 
 sudo pacman -Sc --noconfirm
 sudo pacman -Syyu
