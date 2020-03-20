@@ -7,10 +7,9 @@ echo '
 Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch' | sudo  tee -a  /etc/pacman.d/mirrorlist
 
 sudo pacman -Sc --noconfirm
-sudo pacman -Syyu
+sudo pacman -Syyu --noconfirm
 # update GPG keys
 sudo pacman -S --noconfirm archlinuxcn-keyring
-echo 'start install!'
 sudo pacman -S --noconfirm net-tools
 sudo pacman -S --noconfirm the_silver_searcher
 sudo pacman -S --noconfirm emacs
@@ -92,4 +91,4 @@ if [ ! -d $HOME/.oh-my-zsh ]; then
 fi
 
 
-echo 'install complete!'
+echo 'please reboot!'
