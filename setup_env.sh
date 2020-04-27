@@ -29,7 +29,7 @@ sudo apt install -y lsb-release lsb-core net-tools telnet wget git-extras make g
                     python-pip python3-pip tmux zsh autojump ack-grep silversearcher-ag vim vim-gtk neovim exuberant-ctags suckless-tools \
                     mycli mongodb-clients mongo-tools redis-tools usb-creator-gtk telegram-desktop transmission flameshot tree \
                     vlc virtualbox i3 fcitx jq emacs26 kazam exfat-utils libzmq3-dev libssl-dev protobuf-compiler libreadline-dev \
-                    fonts-powerline fonts-firacode 
+                    fonts-powerline fonts-firacode cloc
 
 
 # ----------------------------------------------------------------
