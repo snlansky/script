@@ -8,6 +8,7 @@ brew install zsh fzf kubernetes-cli autojump cmake
 brew install automake pkg-config pcre xz
 brew install lrzsz
 brew install starship
+brew install cloc
 
 # ----------------------------------------------------------------
 # https://github.com/robbyrussell/oh-my-zsh
