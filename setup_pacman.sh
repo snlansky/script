@@ -43,8 +43,6 @@ sudo pacman -S --noconfirm strace
 sudo pacman -S --noconfirm colordiff
 sudo pacman -S --noconfirm tmux
 sudo pacman -S --noconfirm fzf
-sudo pacman -S --noconfirm nvm
-sudo pacman -S --noconfirm vim
 sudo pacman -S --noconfirm neovim
 sudo pacman -S --noconfirm telegram-desktop
 sudo pacman -S --noconfirm flameshot
@@ -59,13 +57,13 @@ sudo pacman -S --noconfirm the_silver_searcher
 sudo pacman -S --noconfirm autojump
 
 # install google-chrome
-if [ ! -d $HOME/google-chrome  ]; then
-    cd $HOME
-    git clone https://aur.archlinux.org/google-chrome.git/
-    cd google-chrome
-    makepkg -s
-    sudo pacman -U --noconfirm google-chrome*.pgk.tar.gz
-fi
+# if [ ! -d $HOME/google-chrome  ]; then
+#     cd $HOME
+#     git clone https://aur.archlinux.org/google-chrome.git/
+#     cd google-chrome
+#     makepkg -s
+#     sudo pacman -U --noconfirm google-chrome*.pgk.tar.gz
+# fi
 
 # install sogoupinyin
 if [ ! -f $HOME/.xprofile ]; then
