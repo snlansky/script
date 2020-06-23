@@ -55,6 +55,7 @@ sudo pacman -S --noconfirm zsh
 sudo pacman -S --noconfirm base-devel
 sudo pacman -S --noconfirm the_silver_searcher
 sudo pacman -S --noconfirm autojump
+sudo pacman -S --noconfirm wqy-bitmapfont wqy-microhei wqy-microhei-lite wqy-zenhei
 
 # install google-chrome
 # if [ ! -d $HOME/google-chrome  ]; then
