@@ -55,7 +55,11 @@ sudo pacman -S --noconfirm zsh
 sudo pacman -S --noconfirm base-devel
 sudo pacman -S --noconfirm the_silver_searcher
 sudo pacman -S --noconfirm autojump
+sudo pacman -S --noconfirm docker
+# fix chinese
 sudo pacman -S --noconfirm wqy-bitmapfont wqy-microhei wqy-microhei-lite wqy-zenhei
+# fix bluetooth diriver
+sudo pacman -S --noconfirm bluez bluez-utils pulseaudio-bluetooth pavucontrol pulseaudio-alsa pulseaudio-bluetooth-a2dp-gdm-fix
 
 # install google-chrome
 # if [ ! -d $HOME/google-chrome  ]; then
