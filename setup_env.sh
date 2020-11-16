@@ -14,7 +14,6 @@ sudo tar -zcPf /etc/apt.$timestr.tar.gz /etc/apt
 aptRepositories=(
   ppa:jonathonf/vim # vim
   ppa:git-core/ppa # git
-  ppa:kelleyk/emacs # emacs
 )
 for ((i = 0; i < ${#aptRepositories[@]}; i++));
 do
@@ -26,8 +25,8 @@ sudo apt update
 sudo apt install -y lsb-release lsb-core net-tools telnet wget git-extras make gcc g++ cmake clang libtool pkg-config unzip rar unrar \
                     mercurial binutils build-essential bison apt-transport-https ca-certificates software-properties-common gdebi \
                     sysstat nmon htop atop iotop iftop nethogs ethtool nicstat dstat vnstat pstack strace colordiff openssh-server \
-                    tmux zsh autojump ack-grep silversearcher-ag vim vim-gtk neovim exuberant-ctags suckless-tools \
-                    flameshot tree vlc i3 fcitx jq emacs26 exfat-utils libzmq3-dev libssl-dev protobuf-compiler libreadline-dev \
+                    tmux zsh autojump ack-grep silversearcher-ag neovim exuberant-ctags suckless-tools \
+                    flameshot tree vlc i3 fcitx jq exfat-utils libzmq3-dev libssl-dev protobuf-compiler libreadline-dev \
                     fonts-powerline fonts-firacode cloc
 
 
