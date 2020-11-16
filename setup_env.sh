@@ -26,7 +26,7 @@ sudo apt update
 sudo apt install -y lsb-release lsb-core net-tools telnet wget git-extras make gcc g++ cmake clang libtool pkg-config unzip rar unrar \
                     mercurial binutils build-essential bison apt-transport-https ca-certificates software-properties-common gdebi \
                     sysstat nmon htop atop iotop iftop nethogs ethtool nicstat dstat vnstat pstack strace colordiff openssh-server \
-                    python-pip python3-pip tmux zsh autojump ack-grep silversearcher-ag vim vim-gtk neovim exuberant-ctags suckless-tools \
+                    tmux zsh autojump ack-grep silversearcher-ag vim vim-gtk neovim exuberant-ctags suckless-tools \
                     flameshot tree vlc i3 fcitx jq emacs26 exfat-utils libzmq3-dev libssl-dev protobuf-compiler libreadline-dev \
                     fonts-powerline fonts-firacode cloc
 
