@@ -4,7 +4,8 @@ set -x
 
 sudo apt install curl git
 
-curl https://releases.rancher.com/install-docker/18.09.sh | sh
+curl https://releases.rancher.com/install-docker/19.03.sh | sh
+
 
 echo "install docker success!"
 
